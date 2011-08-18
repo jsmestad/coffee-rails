@@ -7,7 +7,7 @@ module Coffee
 
       def self.call(template)
         compiled_source = erb_handler.call(template)
-        "CoffeeScript.compile(begin;#{compiled_source};end)"
+        "CoffeeScript.compile(begin;#{compiled_source};end, :bare => true)"
       end
     end
   end
